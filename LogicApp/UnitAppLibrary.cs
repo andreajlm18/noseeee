@@ -18,7 +18,8 @@ namespace UnitAppLibrary
         {
             try
             {
-                var fileName = Path.GetFullPath("..\\..\\..\\" + file);
+                var fileName = Path.GetFullPath(file);
+                Console.WriteLine(fileName);
                 string jsonString = File.ReadAllText(fileName);
                 dynamic? root = JsonNode.Parse(jsonString)?.AsObject();
                 List<string> keys = GetListKeys(root);
@@ -30,12 +31,11 @@ namespace UnitAppLibrary
                 }
                 return true;
             }
-            catch (System.IO.FileNotFoundException)
+            catch (System.IO.FileNotFoundException e)
             {
+                Console.WriteLine(e.Message + " \n No se encuentra el archivo.");
                 return false;
             }
-
-
         }
         /// <summary>
         /// Método convierte las propiedades del Json "string" a texto.

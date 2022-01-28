@@ -1,0 +1,15 @@
+{
+  "Variable1": "Texto1",
+  "Variable2": "Texto2",
+  "Objeto": {
+    "ObjVar1": "Val1",
+    "ObjVar2": "Val2"
+  },
+  "Arreglo": [
+    "ArrVal1",
+    "ArrVal2",
+    "ArrVal3"
+  ],
+  "Numero": 123,
+  "Booleano": true
+}
